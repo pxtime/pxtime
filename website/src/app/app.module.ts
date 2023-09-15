@@ -17,6 +17,7 @@ import {DigitalMarketingComponent} from "./pages/services/digital-marketing/digi
 import {SupportComponent} from "./pages/services/support/support.component";
 import {TechnologyComponent} from "./pages/services/technology/technology.component";
 import {BlogComponent} from "./pages/blog/blog.component";
+import {SidebarBlogComponent} from "./pages/blog/sidebar-blog/sidebar-blog.component";
 
 
 @NgModule({
@@ -35,7 +36,8 @@ import {BlogComponent} from "./pages/blog/blog.component";
     DigitalMarketingComponent,
     SupportComponent,
     TechnologyComponent,
-    BlogComponent
+    BlogComponent,
+    SidebarBlogComponent
   ],
   imports: [
     BrowserModule,
