@@ -18,6 +18,7 @@ import {SupportComponent} from "./pages/services/support/support.component";
 import {TechnologyComponent} from "./pages/services/technology/technology.component";
 import {BlogComponent} from "./pages/blog/blog.component";
 import {SidebarBlogComponent} from "./pages/blog/sidebar-blog/sidebar-blog.component";
+import {HttpClientModule} from "@angular/common/http";
 
 
 @NgModule({
@@ -42,6 +43,7 @@ import {SidebarBlogComponent} from "./pages/blog/sidebar-blog/sidebar-blog.compo
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

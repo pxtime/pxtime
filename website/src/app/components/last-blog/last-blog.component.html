@@ -4,69 +4,23 @@
       <div class="typo-subtitle">Ultimele articole din blog</div>
     </div>
     <div class="row">
-      <div class="col-md-4">
+      <div *ngFor="let post of lastPageItems" class="col-md-4">
         <div class="blog-item">
-          <!--          inlocuim cu poza, are si link-->
-          <img src="https://cdn.pixabay.com/photo/2014/02/27/16/10/flowers-276014_640.jpg" alt="" class="img-fluid">
+          <img src="{{post.fimg_url}}" alt="" class="img-fluid">
           <div class="blog-item-content d-flex flex-column position-relative">
             <div class="tag vertical">
-              <!--              toate tagurile pe care le contine-->
+              {{post.tags}}
               <div class="tag-item">tag 1</div>
               <div class="tag-item">tag 3</div>
             </div>
-            <!--            inlocuim cu titlul si punem link-->
+            {{post.title.rendered}}
             <div class="large-title">10 secrete UI/UX pentru o experiență memorabilă</div>
             <div class="typo-small-normal">
-              <!--              inlocuim cu excerpt-->
+              {{post.excerpt.rendered}}
               sit ametipsum dolor sit amet sit ametipsum dolor sit amet sit ametipsum dolor sit amet sit ametipsum dolor
               sit amet
             </div>
-            <!--            link catre single post-->
-            <span class="typo-text-calltoaction color-link link">citeste mai mult</span>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="blog-item">
-          <!--          inlocuim cu poza, are si link-->
-          <img src="https://cdn.pixabay.com/photo/2014/02/27/16/10/flowers-276014_640.jpg" alt="" class="img-fluid">
-          <div class="blog-item-content d-flex flex-column position-relative">
-            <div class="tag vertical">
-              <!--              toate tagurile pe care le contine-->
-              <div class="tag-item">tag 1</div>
-              <div class="tag-item">tag 3</div>
-            </div>
-            <!--            inlocuim cu titlul si punem link-->
-            <div class="large-title">10 secrete UI/UX pentru o experiență memorabilă</div>
-            <div class="typo-small-normal">
-              <!--              inlocuim cu excerpt-->
-              sit ametipsum dolor sit amet sit ametipsum dolor sit amet sit ametipsum dolor sit amet sit ametipsum dolor
-              sit amet
-            </div>
-            <!--            link catre single post-->
-            <span class="typo-text-calltoaction color-link link">citeste mai mult</span>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="blog-item">
-          <!--          inlocuim cu poza, are si link-->
-          <img src="https://cdn.pixabay.com/photo/2014/02/27/16/10/flowers-276014_640.jpg" alt="" class="img-fluid">
-          <div class="blog-item-content d-flex flex-column position-relative">
-            <div class="tag vertical">
-              <!--              toate tagurile pe care le contine-->
-              <div class="tag-item">tag 1</div>
-              <div class="tag-item">tag 3</div>
-            </div>
-            <!--            inlocuim cu titlul si punem link-->
-            <div class="large-title">10 secrete UI/UX pentru o experiență memorabilă</div>
-            <div class="typo-small-normal">
-              <!--              inlocuim cu excerpt-->
-              sit ametipsum dolor sit amet sit ametipsum dolor sit amet sit ametipsum dolor sit amet sit ametipsum dolor
-              sit amet
-            </div>
-            <!--            link catre single post-->
-            <span class="typo-text-calltoaction color-link link">citeste mai mult</span>
+            <span routerLink="/blog/{{post.id}}" class="typo-text-calltoaction color-link link">citeste mai mult</span>
           </div>
         </div>
       </div>

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {HttpClient} from "@angular/common/http";
+import {Observable} from "rxjs";
 
 @Component({
   selector: 'app-last-blog',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LastBlogComponent implements OnInit {
 
-  constructor() { }
+  public lastPageItems !: Array<any>
 
-  ngOnInit(): void {
+  constructor(private http:HttpClient) { }
+
+  public getLast3Posts(): Observable<Array<{}>> {
+    const url = 'https://pixeltime.ro/wp/wp-json/wp/v2/posts?per_page=3';
+    return this.http.get<Array<{}>>(url);
   }
 
+  ngOnInit() {
+    this.getLast3Posts().subscribe(data => {
+      this.lastPageItems = data
+    })
+  }
 }
