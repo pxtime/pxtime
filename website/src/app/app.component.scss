@@ -30,6 +30,9 @@
   &.homepage {
     background: #EFF0F2;
   }
+  &.about {
+    background: var(--white);
+  }
 
   .navbar {
     .nav-item {
