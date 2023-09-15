@@ -1,0 +1,44 @@
+.projects {
+  //padding: 0 0 80px;
+
+  ul {
+    margin: 0 auto;
+    display: flex;
+    list-style: none;
+    gap: 1px;
+    width: fit-content;
+
+    li {
+      background: var(--white);
+      color: var(--black-04);
+      padding: 16px 24px;
+
+      &:hover, &.active {
+        color: var(--primary-1);
+      }
+    }
+  }
+  .proj{
+    background: var(--white);
+    padding: 40px 0 4px;
+  }
+  &-item {
+    background: var(--white);
+    border-radius: 20px;
+    margin: 10px;
+    position: relative;
+    img {
+      border-radius: 20px;
+    }
+
+    span{
+      position: absolute;
+      bottom: 24px;
+      right: 24px;
+      background: var(--white);
+      padding: 4px 8px;
+      border-radius: 4px;
+      box-shadow: 0px 0px 20px 0px var(--black-04);
+    }
+  }
+}

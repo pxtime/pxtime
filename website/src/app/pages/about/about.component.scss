@@ -1,0 +1,27 @@
+
+.clients {
+  padding: 100px 0;
+  background: var(--white);
+
+  &-content {
+    gap: 24px;
+
+    strong {
+      color: var(--primary-1);
+    }
+  }
+}
+
+.adventure {
+  padding: 80px 0;
+
+  &-content {
+    background: var(--white);
+    padding: 24px;
+    border-radius: 24px;
+
+    .col {
+      gap: 24px;
+    }
+  }
+}

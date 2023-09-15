@@ -1,0 +1,20 @@
+.hero {
+  background: #EFF0F2;
+  padding: 80px 0 0;
+
+  h1 {
+    margin-bottom: 40px;
+  }
+
+  .headline {
+    gap: 40px;
+  }
+
+  .actions {
+    gap: 16px;
+  }
+
+  strong {
+    color: var(--primary-1);
+  }
+}

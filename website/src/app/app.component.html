@@ -1,0 +1,124 @@
+<div id="topbar" class="d-none d-md-block">
+  <div class="container">
+    <div class="row  flex-row-reverse">
+      <ul class="float-right m-0 typo-small-medium">
+        <li routerLink="/blog">blog</li>
+        <li>cariere</li>
+        <li>contact</li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div id="menu" [class.homepage]="route=='/home'">
+  <div class="container">
+    <div class="row">
+      <nav class="navbar navbar-expand-sm">
+        <div class="container-fluid ">
+          <a class="navbar-brand ">
+            <img src="assets/logo.svg" alt="" routerLink="/home">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                  aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+            <ul class="navbar-nav d-flex align-items-center typo-normal-medium">
+              <li class="nav-item">
+                <div class="nav-link" aria-current="page"  routerLinkActive="active" routerLink="/home">Acasa</div>
+              </li>
+              <li class="nav-item">
+                <div class="nav-link" aria-current="page" routerLinkActive="active" routerLink="/projects">Proiecte</div>
+              </li>
+              <li class="nav-item">
+                <div class="nav-link" aria-current="page" routerLinkActive="active" routerLink="/clients">Clienti</div>
+              </li>
+              <li class="nav-item">
+                <div class="nav-link" aria-current="page" routerLinkActive="active" routerLink="/about">Despre noi</div>
+              </li>
+              <li class="nav-item dropdown">
+                <div class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"
+                     aria-expanded="false">
+                  Servicii
+                </div>
+                <ul class="dropdown-menu">
+                  <li><div class="dropdown-item" routerLink="services/design">Design</div>
+                  <li><div class="dropdown-item" routerLink="services/branding">Branding</div>
+                  <li><div class="dropdown-item" routerLink="services/digital-marketing">Marketing Digital</div>
+                  <li><div class="dropdown-item" routerLink="services/technology">Tehnologie și securitate</div>
+                  <li><div class="dropdown-item" routerLink="services/support">Suport și Mentenanță</div>
+                </ul>
+              </li>
+              <li class="calltoaction ml-xs-0">
+                <div class="cta typo-text-calltoaction">vreau consultanta gratuita</div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </div>
+</div>
+<router-outlet></router-outlet>
+<div id="footer">
+  <div class="container">
+    <div class="d-flex align-items-center  py-4">
+      <div class="flex-grow-1">
+        <img src="assets/logo-white.svg" alt="" routerLink="/home">
+        <span class="typo-small-normal">@2023</span>
+      </div>
+      <div class="calltoaction typo-text-calltoaction">vreau consultanta</div>
+    </div>
+    <div class="row  py-4">
+      <div class="col">
+        <strong class="typo-normal-bold">PixelTime</strong>
+        <ul class="list-unstyled typo-small-normal">
+          <li routerLink="/about" >Despre Noi</li>
+          <li routerLink="/clients" >Clienti</li>
+          <li>Studii de caz</li>
+          <li routerLink="/projects" >Proiecte</li>
+        </ul>
+      </div>
+      <div class="col">
+        <strong class="typo-normal-bold">Servicii</strong>
+        <ul class="list-unstyled typo-small-normal">
+          <li routerLink="services/design">Design</li>
+          <li routerLink="services/branding">Branding</li>
+          <li routerLink="services/digital-marketing">Marketing Digital</li>
+          <li routerLink="services/technology">Tehnologie și securitate</li>
+          <li routerLink="services/support">Suport și Mentenanță</li>
+        </ul>
+      </div>
+      <div class="col">
+        <strong class="typo-normal-bold">Resurse</strong>
+        <ul class="list-unstyled typo-small-normal">
+          <li routerLink="/blog">Blog</li>
+          <li>Studii de caz</li>
+          <li>Newsletter</li>
+          <li>Ebook-uri GRATUITE</li>
+        </ul>
+      </div>
+      <div class="col">
+        <strong class="typo-normal-bold">Despre Noi</strong>
+        <ul class="list-unstyled typo-small-normal">
+          <li>Cariere</li>
+          <li routerLink="/gdpr">GDPR</li>
+          <li>Contact</li>
+          <li routerLink="/terms-conditions">Termeni si conditii</li>
+        </ul>
+      </div>
+      <div class="col">
+        <strong class="typo-normal-bold">PIXELTIME WEB SOLUTIONS SRL</strong>
+
+        <ul class="list-unstyled typo-small-normal">
+          <li>CUI : 43103336</li>
+          <li>Reg. Com.: J52/759/2020</li>
+          <li>Campurelu, Str. Nisiparului 35</li>
+          <li>jud Giurgiu, Romania</li>
+        </ul>
+      </div>
+      <div class="col">
+        <strong class="typo-normal-bold">Facem prezenta si aici:</strong>
+      </div>
+    </div>
+  </div>
+</div>
