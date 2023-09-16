@@ -9,16 +9,10 @@
           <img src="{{post.fimg_url}}" alt="" class="img-fluid">
           <div class="blog-item-content d-flex flex-column position-relative">
             <div class="tag vertical">
-              {{post.tags}}
-              <div class="tag-item">tag 1</div>
-              <div class="tag-item">tag 3</div>
+              <div class="tag-item" *ngFor="let t of post.tags">{{t}}</div>
             </div>
-            {{post.title.rendered}}
-            <div class="large-title">10 secrete UI/UX pentru o experiență memorabilă</div>
-            <div class="typo-small-normal">
-              {{post.excerpt.rendered}}
-              sit ametipsum dolor sit amet sit ametipsum dolor sit amet sit ametipsum dolor sit amet sit ametipsum dolor
-              sit amet
+            <div class="large-title">{{post.title.rendered}}</div>
+            <div class="typo-small-normal" [innerHTML]="post.excerpt.rendered">
             </div>
             <span routerLink="/blog/{{post.id}}" class="typo-text-calltoaction color-link link">citeste mai mult</span>
           </div>
