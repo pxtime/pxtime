@@ -3,20 +3,30 @@ import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
 import {ActivatedRoute, ParamMap} from "@angular/router";
 
+interface PostInterface  {
+  title:{rendered:string},
+  content:{rendered:string},
+  tags:Array<string>,
+  fimg_url:string
+}
+
 @Component({
   selector: 'app-single-blog',
   templateUrl: './single-blog.component.html',
   styleUrls: ['../blog.component.scss']
 })
+
+
+
 export class SingleBlogComponent implements OnInit {
 
-  public post !: Array<any>
+  public post !: PostInterface
 
   constructor(private http:HttpClient ,  private _route: ActivatedRoute,) { }
 
-  public getPost(id:string): Observable<Array<{}>> {
+  public getPost(id:string): Observable<PostInterface> {
     const url = `https://pixeltime.ro/wp/wp-json/wp/v2/posts/${id}`;
-    return this.http.get<Array<{}>>(url);
+    return this.http.get<PostInterface>(url);
   }
 
   ngOnInit() {
