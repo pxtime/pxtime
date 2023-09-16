@@ -2,21 +2,15 @@ import {Component, OnInit} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
 import {ActivatedRoute, ParamMap} from "@angular/router";
+import {PostInterface} from "../../../interfaces/post.interface";
 
-interface PostInterface  {
-  title:{rendered:string},
-  content:{rendered:string},
-  tags:Array<string>,
-  fimg_url:string
-}
+
 
 @Component({
   selector: 'app-single-blog',
   templateUrl: './single-blog.component.html',
   styleUrls: ['../blog.component.scss']
 })
-
-
 
 export class SingleBlogComponent implements OnInit {
 
