@@ -1,18 +1,21 @@
-<div class="container">
-  <div class="row">
-    <div class="col-md-9">
-              <div>{{post.title.rendered}}</div>
-              <div [innerHTML]="post.content.rendered"></div>
-            <ul>
-              <li *ngFor="let t of post.tags">{{t}}</li>
-            </ul>
-            <img src="{{post.fimg_url}}" alt="" class="img-fluid link">
-      <pre>
-          {{post | json}}
-        </pre>
-    </div>
-    <div class="col-md-3">
-      <app-sidebar-blog></app-sidebar-blog>
+<div class="blog">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-9 article">
+        <div class="large-title">{{post.title.rendered}}</div>
+        <img src="{{post.fimg_url}}" alt="" class="img-fluid featured">
+        <div class="tag">
+          <div class="tag-item" *ngFor="let t of post.tags">{{t}}</div>
+        </div>
+        <div [innerHTML]="post.content.rendered"></div>
+        <ul>
+          <li *ngFor="let t of post.tags">{{t}}</li>
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <app-sidebar-blog></app-sidebar-blog>
+      </div>
     </div>
   </div>
+
 </div>
