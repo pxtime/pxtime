@@ -6,12 +6,12 @@
     <div class="row">
       <div *ngFor="let post of lastPageItems" class="col-md-4">
         <div class="blog-item">
-          <img src="{{post.fimg_url}}" alt="" class="img-fluid">
+          <img src="{{post.fimg_url}}" alt="" class="img-fluid link" routerLink="/blog/{{post.id}}">
           <div class="blog-item-content d-flex flex-column position-relative">
             <div class="tag vertical">
               <div class="tag-item" *ngFor="let t of post.tags">{{t}}</div>
             </div>
-            <div class="large-title">{{post.title.rendered}}</div>
+            <div class="large-title link" routerLink="/blog/{{post.id}}">{{post.title.rendered}}</div>
             <div class="typo-small-normal" [innerHTML]="post.excerpt.rendered">
             </div>
             <span routerLink="/blog/{{post.id}}" class="typo-text-calltoaction color-link link">citeste mai mult</span>
