@@ -9,9 +9,7 @@
           <img src="{{post.fimg_url}}" alt="" class="img-fluid">
           <div class="blog-item-content d-flex flex-column position-relative">
             <div class="tag vertical">
-              {{post.tags}}
-              <div class="tag-item">tag 1</div>
-              <div class="tag-item">tag 3</div>
+              <div class="tag-item" *ngFor="let t of post.tags">{{t}}</div>
             </div>
             <div class="large-title">{{post.title.rendered}}</div>
             <div class="typo-small-normal" [innerHTML]="post.excerpt.rendered">
