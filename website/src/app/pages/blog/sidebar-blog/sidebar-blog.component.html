@@ -2,13 +2,7 @@
   <div class="col">
     <div class="typo-large-bold">Recent Posts</div>
     <ul>
-      <li class="link typo-normal-title">Working From Home? 9 Tips to Help You Succeed</li>
-      <li class="link typo-normal-title">Working From Home? 9 Tips to Help You Succeed</li>
-      <li class="link typo-normal-title">Working From Home? 9 Tips to Help You Succeed</li>
-      <li class="link typo-normal-title">Working From Home? 9 Tips to Help You Succeed</li>
-      <li class="link typo-normal-title">Working From Home? 9 Tips to Help You Succeed</li>
-      <li class="link typo-normal-title">Working From Home? 9 Tips to Help You Succeed</li>
-      <li class="link typo-normal-title">Working From Home? 9 Tips to Help You Succeed</li>
+      <li class="link typo-normal-title"  *ngFor="let post of lastItems"  routerLink="/blog/{{post.id}}">{{post.title.rendered}}</li>
     </ul>
     <div class="ebook">
       <div class="typo-subtitle">100 de sfaturi pentru un site de succes</div>
