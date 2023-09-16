@@ -12,6 +12,7 @@ import {DesignComponent} from "./pages/services/design/design.component";
 import {TechnologyComponent} from "./pages/services/technology/technology.component";
 import {SupportComponent} from "./pages/services/support/support.component";
 import {BlogComponent} from "./pages/blog/blog.component";
+import {SingleBlogComponent} from "./pages/blog/single-blog/single-blog.component";
 
 const routes: Routes = [];
 
@@ -21,6 +22,7 @@ const routes: Routes = [];
       { path: 'home', component: HomepageComponent },
       { path: 'about', component: AboutComponent },
       { path: 'blog', component: BlogComponent },
+      { path:  'blog/:id' , component: SingleBlogComponent },
       { path: 'projects', component: ProjectsComponent },
       { path: 'clients', component: ClientsComponent },
       { path: 'terms-conditions', component: TermsConditionsComponent },

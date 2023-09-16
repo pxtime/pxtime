@@ -19,6 +19,7 @@ import {TechnologyComponent} from "./pages/services/technology/technology.compon
 import {BlogComponent} from "./pages/blog/blog.component";
 import {SidebarBlogComponent} from "./pages/blog/sidebar-blog/sidebar-blog.component";
 import {HttpClientModule} from "@angular/common/http";
+import {SingleBlogComponent} from "./pages/blog/single-blog/single-blog.component";
 
 
 @NgModule({
@@ -38,7 +39,8 @@ import {HttpClientModule} from "@angular/common/http";
     SupportComponent,
     TechnologyComponent,
     BlogComponent,
-    SidebarBlogComponent
+    SidebarBlogComponent,
+    SingleBlogComponent
   ],
   imports: [
     BrowserModule,
