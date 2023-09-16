@@ -20,4 +20,23 @@
       gap: 20px;
     }
   }
+
+  .article {
+    .large-title {
+      margin-bottom: 24px;
+    }
+
+    .featured {
+      border-radius: 20px;
+      margin-bottom: 16px;
+      width: 100%;
+    }
+    .tag{
+      margin-bottom: 40px;
+    }
+
+    strong {
+      color: var(--primary-1);
+    }
+  }
 }

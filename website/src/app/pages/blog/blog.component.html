@@ -1,37 +1,36 @@
-<!-- START ARTICLE-->
-<div>
-  title->rendered
-  date
-  excerpt->rendered
-  id
-  <span routerLink="/blog/excerpt sau id">link catre blog</span>
-</div>
-<!-- END ARTICLE-->
 <div class="blog">
   <div class="container d-flex flex-column">
-    <div class="row text-center">
-      <div class="typo-subtitle">Blog</div>
-    </div>
-    <div class="row">
-      <div *ngFor="let post of totalItemsPerPage" class="col-md-4">
-        <div class="blog-item">
-          <img src="{{post.fimg_url}}" alt="" class="img-fluid link" routerLink="/blog/{{post.id}}">
-          <div class="blog-item-content d-flex flex-column position-relative">
-            <div class="tag vertical">
-              <div class="tag-item" *ngFor="let t of post.tags">{{t}}</div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-9">
+          <div class="row">
+            <div *ngFor="let post of totalItemsPerPage" class="col-md-6">
+              <div class="blog-item">
+                <img src="{{post.fimg_url}}" alt="" class="img-fluid link" routerLink="/blog/{{post.id}}">
+                <div class="blog-item-content d-flex flex-column position-relative">
+                  <div class="tag vertical">
+                    <div class="tag-item" *ngFor="let t of post.tags">{{t}}</div>
+                  </div>
+                  <div class="large-title link" routerLink="/blog/{{post.id}}">{{post.title.rendered}}</div>
+                  <div class="typo-small-normal" [innerHTML]="post.excerpt.rendered">
+                  </div>
+                  <span routerLink="/blog/{{post.id}}" class="typo-text-calltoaction color-link link">citeste mai mult</span>
+                </div>
+              </div>
             </div>
-            <div class="large-title link" routerLink="/blog/{{post.id}}">{{post.title.rendered}}</div>
-            <div class="typo-small-normal" [innerHTML]="post.excerpt.rendered">
-            </div>
-            <span routerLink="/blog/{{post.id}}" class="typo-text-calltoaction color-link link">citeste mai mult</span>
           </div>
         </div>
+        <div class="col-md-3">
+          <app-sidebar-blog></app-sidebar-blog>
+        </div>
       </div>
+    </div>
+    <div class="row">
     </div>
     <div class="controls">
       <button (click)="prevPage()" [disabled]="currentPage===1">Prev page</button>
       {{currentPage}}
-      <button (click)="nextPage()"  [disabled]="currentPage===this.getTotalPages()+1">Next page</button>
+      <button (click)="nextPage()" [disabled]="currentPage===this.getTotalPages()+1">Next page</button>
     </div>
   </div>
 </div>
