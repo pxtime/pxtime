@@ -13,6 +13,9 @@ import {TechnologyComponent} from "./pages/services/technology/technology.compon
 import {SupportComponent} from "./pages/services/support/support.component";
 import {BlogComponent} from "./pages/blog/blog.component";
 import {SingleBlogComponent} from "./pages/blog/single-blog/single-blog.component";
+import {CareersComponent} from "./pages/careers/careers.component";
+import {ContactComponent} from "./pages/contact/contact.component";
+import {EbooksComponent} from "./pages/ebooks/ebooks.component";
 
 const routes: Routes = [];
 
@@ -32,6 +35,9 @@ const routes: Routes = [];
       { path: 'services/digital-marketing', component: DigitalMarketingComponent },
       { path: 'services/technology', component: TechnologyComponent },
       { path: 'services/support', component: SupportComponent },
+      { path: 'careers', component: CareersComponent },
+      { path: 'contact', component: ContactComponent },
+      { path: 'ebooks', component: EbooksComponent },
       { path: '**', redirectTo: 'home' }
     ])
   ],

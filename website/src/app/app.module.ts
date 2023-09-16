@@ -20,6 +20,9 @@ import {BlogComponent} from "./pages/blog/blog.component";
 import {SidebarBlogComponent} from "./pages/blog/sidebar-blog/sidebar-blog.component";
 import {HttpClientModule} from "@angular/common/http";
 import {SingleBlogComponent} from "./pages/blog/single-blog/single-blog.component";
+import {CareersComponent} from "./pages/careers/careers.component";
+import {ContactComponent} from "./pages/contact/contact.component";
+import {EbooksComponent} from "./pages/ebooks/ebooks.component";
 
 
 @NgModule({
@@ -40,6 +43,9 @@ import {SingleBlogComponent} from "./pages/blog/single-blog/single-blog.componen
     TechnologyComponent,
     BlogComponent,
     SidebarBlogComponent,
+    CareersComponent,
+    ContactComponent,
+    EbooksComponent,
     SingleBlogComponent
   ],
   imports: [
