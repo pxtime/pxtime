@@ -4,7 +4,6 @@
       <div class="typo-subtitle">Ultimele articole din blog</div>
     </div>
     <div class="row">
-      <pre>{{lastPageItems | json}}</pre>
       <div *ngFor="let post of lastPageItems" class="col-md-4">
         <div class="blog-item">
           <img *ngIf="post.fimg_url" src="{{post.fimg_url}}" alt="" class="img-fluid link" routerLink="/blog/{{post.id}}">
