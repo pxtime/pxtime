@@ -13,12 +13,30 @@
 
     img {
       border-radius: 20px 20px 0 0;
+      width: 100%;
     }
 
     &-content {
       padding: 20px 40px;
       gap: 20px;
     }
+  }
+
+  .large-title, .typo-small-normal {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+
+  }
+
+  .large-title {
+    -webkit-line-clamp: 2;
+    height: 64px;
+  }
+
+  .typo-small-normal {
+    -webkit-line-clamp: 4;
   }
 
   .article {
@@ -31,12 +49,14 @@
       margin-bottom: 16px;
       width: 100%;
     }
-    .tag{
+
+    .tag {
       margin-bottom: 40px;
     }
 
     strong {
       color: var(--primary-1);
     }
+
   }
 }

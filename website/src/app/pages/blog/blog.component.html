@@ -6,7 +6,8 @@
           <div class="row">
             <div *ngFor="let post of totalItemsPerPage" class="col-md-6">
               <div class="blog-item">
-                <img src="{{post.fimg_url}}" alt="" class="img-fluid link" routerLink="/blog/{{post.id}}">
+                  <img *ngIf="post.fimg_url" src="{{post.fimg_url}}" alt="" class="img-fluid link" routerLink="/blog/{{post.id}}">
+                  <img *ngIf="!post.fimg_url" src="https://placehold.co/860x260/EEE/31343C" alt="">
                 <div class="blog-item-content d-flex flex-column position-relative">
                   <div class="tag vertical">
                     <div class="tag-item" *ngFor="let t of post.tags">{{t}}</div>

@@ -11,7 +11,7 @@ import {PostInterface} from "../../interfaces/post.interface";
 export class BlogComponent implements OnInit {
 
   public currentPage = 1;
-  public itemsPerPage = 3;
+  public itemsPerPage = 6;
 
   public totalItemsPerPage!: Array<PostInterface>
   public totalItems!: number
