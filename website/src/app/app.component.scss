@@ -29,6 +29,10 @@
 
 
   .navbar {
+    @media(max-width: 768px) {
+      padding: 10px 10px 0;
+    }
+
     .nav-item {
       @media(max-width: 768px) {
         width: 100%;
@@ -64,6 +68,7 @@
       border-radius: 25px;
       background: var(--white);
       padding: 0;
+      margin-bottom: 20px;
 
       li {
         cursor: pointer;
@@ -89,13 +94,31 @@
   }
 
   &.blog {
-    background: var(--black-01);
+    @media (min-width: 769px) {
+      background: var(--black-01);
+      .nav-link {
+        color: var(--white) !important;
 
-    .nav-link {
-      color: var(--white) !important;
-
-      &:hover {
-        color: var(--black-01) !important;
+        &:hover {
+          color: var(--black-01) !important;
+        }
+      }
+      .navbar-brand {
+        img {
+          &:first-child {
+            display: none;
+          }
+        }
+      }
+    }
+    @media(max-width: 768px) {
+      background: var(--white);
+      .navbar-brand {
+        img {
+          &:last-child {
+            display: none;
+          }
+        }
       }
     }
   }
@@ -111,6 +134,7 @@
   }
 
   ul {
+
     li {
       color: #CCD0DC;
       cursor: pointer;
@@ -124,6 +148,29 @@
       &:hover a:hover {
         color: var(--white);
       }
+    }
+  }
+
+  img {
+    @media (max-width: 768px) {
+      width: fit-content;
+      margin: 0 auto;
+    }
+  }
+
+  .flex-grow-1 {
+    @media (max-width: 768px) {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      text-align: center;
+    }
+  }
+
+  .content,
+  .calltoaction {
+    @media (max-width: 768px) {
+      display: none;
     }
   }
 }

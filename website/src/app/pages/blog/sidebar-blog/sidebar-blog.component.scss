@@ -1,25 +1,33 @@
-:host{
+:host {
   display: block;
+  @media(max-width: 768px) {
+    display: none;
+  }
 }
-.col{
+
+.col {
   display: flex;
   flex-direction: column;
   gap: 40px;
 }
-ul{
+ul {
   margin: 0;
   padding: 0;
   list-style: none;
   display: flex;
   flex-direction: column;
   gap: 20px;
-  li{
+
+
+  li {
     color: var(--primary-1);
-    &:hover{
+
+    &:hover {
       color: var(--black-01);
     }
   }
 }
+
 .ebook {
   background: var(--gradient);
   color: var(--white);
@@ -30,6 +38,7 @@ ul{
   text-align: center;
   gap: 30px;
   border-radius: 12px;
+
   button {
     padding: 8px 24px;
     border-radius: 12px;

@@ -21,6 +21,7 @@
         <div class="container-fluid ">
           <a class="navbar-brand ">
             <img *ngIf="route!=='/blog'" src="assets/logo.svg" alt="" routerLink="/home" class="link">
+            <img *ngIf="route=='/blog'" src="assets/logo.svg" alt="" routerLink="/home" class="link">
             <img *ngIf="route=='/blog'" src="assets/logo-white.svg" alt="" routerLink="/home" class="link">
           </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -37,6 +38,9 @@
               </li>
               <li class="nav-item">
                 <div class="nav-link" aria-current="page" routerLinkActive="active" routerLink="/clients">Clienti</div>
+              </li>
+              <li class="nav-item showOnMobile">
+                <div class="nav-link" aria-current="page" routerLinkActive="active" routerLink="/blog">Blog</div>
               </li>
               <li class="nav-item">
                 <div class="nav-link" aria-current="page" routerLinkActive="active" routerLink="/about">Despre noi</div>
@@ -74,7 +78,7 @@
       </div>
       <div class="calltoaction typo-text-calltoaction">vreau consultanta</div>
     </div>
-    <div class="row  py-4">
+    <div class="row  py-4 content">
       <div class="col">
         <strong class="typo-normal-bold">PixelTime</strong>
         <ul class="list-unstyled typo-small-normal">

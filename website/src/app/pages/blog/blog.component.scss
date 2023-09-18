@@ -3,11 +3,17 @@
   background: var(--black-01);
   padding: 100px;
   text-align: center;
+  @media  (max-width: 768px){
+    display: none;
+  }
 }
 
 .blog {
   padding: 80px 0;
   background: var(--white);
+  @media  (max-width: 768px){
+    padding: 0 0 24px;
+  }
 
   .container {
     gap: 40px;
@@ -21,6 +27,9 @@
     flex-direction: column;
     gap: 10px;
     margin-bottom: 20px;
+    @media  (max-width: 768px){
+      padding: 20px 0;
+    }
 
     .tag {
       height: 24px;
