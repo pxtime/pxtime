@@ -27,12 +27,6 @@
 #menu {
   padding: 16px 0;
 
-  &.homepage {
-    background: #EFF0F2;
-  }
-  &.about {
-    background: var(--white);
-  }
 
   .navbar {
     .nav-item {
@@ -85,6 +79,26 @@
       }
     }
   }
+
+  &.homepage {
+    background: #EFF0F2;
+  }
+
+  &.about {
+    background: var(--white);
+  }
+
+  &.blog {
+    background: var(--black-01);
+
+    .nav-link {
+      color: var(--white) !important;
+
+      &:hover {
+        color: var(--black-01) !important;
+      }
+    }
+  }
 }
 
 #footer {
@@ -101,10 +115,12 @@
       color: #CCD0DC;
       cursor: pointer;
       padding: 4px 0;
-      a{
+
+      a {
         color: #CCD0DC;
         text-decoration: none;
       }
+
       &:hover a:hover {
         color: var(--white);
       }

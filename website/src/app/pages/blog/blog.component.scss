@@ -1,5 +1,13 @@
+#hero-blog {
+  color: var(--white);
+  background: var(--black-01);
+  padding: 100px;
+  text-align: center;
+}
+
 .blog {
   padding: 80px 0;
+  background: var(--white);
 
   .container {
     gap: 40px;
@@ -8,17 +16,23 @@
   &-item {
     background: var(--white);
     border-radius: 20px;
-    margin: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
 
+    .tag {
+      height: 24px;
+    }
 
     img {
-      border-radius: 20px 20px 0 0;
+      border-radius: 20px;
       width: 100%;
     }
 
     &-content {
-      padding: 20px 40px;
-      gap: 20px;
+      gap: 10px;
     }
   }
 
@@ -33,6 +47,9 @@
   .large-title {
     -webkit-line-clamp: 2;
     height: 64px;
+    &:hover{
+      color: var(--primary-1);
+    }
   }
 
   .typo-small-normal {
