@@ -2,8 +2,8 @@
   <div class="container">
     <div class="row">
       <div class="prevarticle"
-           [ngStyle]="{'background-image': totalItemsPerPage[0].fimg_url ? 'url(totalItemsPerPage[0].fimg_url)' : (!totalItemsPerPage[0].fimg_url ? 'url(https://placehold.co/860x260/EEE/31343C)' : 'none')}">
-        <div class="tag">
+           [ngStyle]="{'background-image': totalItemsPerPage[0].fimg_url ? 'url(' + totalItemsPerPage[0].fimg_url + ')' : (!totalItemsPerPage[0].fimg_url ? 'url(https://placehold.co/860x260/EEE/31343C)' : 'none')}">
+      <div class="tag">
           <div class="tag-item typo-text-calltoaction" *ngFor="let t of totalItemsPerPage[0].tags">{{t}}</div>
         </div>
         <div class="typo-big-title link"
