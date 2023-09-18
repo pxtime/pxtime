@@ -1,13 +1,22 @@
-.adventure {
-  padding: 40px 0 80px;
+:host {
 
-  &-content {
-    background: var(--white);
-    padding: 24px;
-    border-radius: 24px;
+  @media (max-width: 768px) {
+    display: none;
+  }
 
-    .col {
-      gap: 24px;
+  .adventure {
+    padding: 40px 0 80px;
+
+    &-content {
+      background: var(--white);
+      padding: 24px;
+      border-radius: 24px;
+
+      .col {
+        gap: 24px;
+      }
     }
   }
+
+
 }
