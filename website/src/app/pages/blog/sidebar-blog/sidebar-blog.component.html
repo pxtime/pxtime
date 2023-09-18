@@ -1,6 +1,6 @@
 <div class="row">
   <div class="col">
-    <div class="typo-large-bold">Recent Posts</div>
+    <div class="typo-large-bold recent">Recent Posts</div>
     <ul>
       <li class="link typo-normal-title"  *ngFor="let post of lastItems"  routerLink="/blog/{{post.id}}">{{post.title.rendered}}</li>
     </ul>
