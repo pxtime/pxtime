@@ -12,8 +12,9 @@
                   <img *ngIf="post.fimg_url" src="{{post.fimg_url}}" alt="" class="img-fluid link" routerLink="/blog/{{post.id}}" class="link">
                   <img *ngIf="!post.fimg_url" src="https://placehold.co/860x260/EEE/31343C" alt="" routerLink="/blog/{{post.id}}" class="link">
                 <div class="blog-item-content d-flex flex-column position-relative">
-                  <div class="tag">
-                    <div class="tag-item" *ngFor="let t of post.tags">{{t}}</div>
+                  <div class="tags">
+                    <span class="typo-text-calltoaction" *ngIf="post.tags.length">Taguri: </span>
+                    <div class="tags-item typo-text-calltoaction" *ngFor="let t of post.tags">{{t}}</div>
                   </div>
                   <div class="large-title link" routerLink="/blog/{{post.id}}">{{post.title.rendered}}</div>
                   <div class="typo-small-normal" [innerHTML]="post.excerpt.rendered">
