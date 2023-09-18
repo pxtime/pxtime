@@ -147,10 +147,11 @@ body {
 }
 
 
-.tag{
+.tag {
   display: flex;
   gap: 4px;
-  &.vertical{
+
+  &.vertical {
     transform: rotate(-90deg);
     transform-origin: left bottom;
     position: absolute;
@@ -161,7 +162,8 @@ body {
     align-items: flex-end;
     width: 50%;
   }
-  .tag-item{
+
+  .tag-item {
     @extend .typo-tags;
     text-transform: uppercase;
     padding: 2px 8px;
@@ -170,9 +172,10 @@ body {
     border-radius: 4px;
   }
 }
-.blog-item-content{
-  .typo-small-normal{
-    p{
+
+.blog-item-content {
+  .typo-small-normal {
+    p {
       margin: 0;
     }
   }
@@ -180,8 +183,19 @@ body {
 }
 
 
-.showOnMobile{
-  @media(min-width: 768px){
+.showOnMobile {
+  @media(min-width: 768px) {
     display: none;
+  }
+}
+
+.article {
+  &.single {
+    p{
+      margin-bottom: 40px;
+      strong{
+        color: var(--primary-1);
+      }
+    }
   }
 }
