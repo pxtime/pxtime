@@ -50,7 +50,7 @@
     <div class="controls">
       <button (click)="prevPage()" [disabled]="currentPage===1">Prev page</button>
       {{currentPage}}
-      <button (click)="nextPage()" [disabled]="currentPage===this.getTotalPages()+1">Next page</button>
+      <button (click)="nextPage()" [disabled]="currentPage===this.getTotalPages()">Next page</button>
     </div>
   </div>
 </div>

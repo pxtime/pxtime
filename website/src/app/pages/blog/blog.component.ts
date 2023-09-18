@@ -44,9 +44,9 @@ export class BlogComponent implements OnInit {
   }
 
   getTotalPages(): number {
-    if(!this.totalItemsPerPage)
+    if (!this.totalItemsPerPage)
       return 0;
-    return Math.ceil(this.totalItemsPerPage.length / this.itemsPerPage);
+    return Math.ceil(this.totalItems / this.itemsPerPage);
   }
 
   ngOnInit() {
