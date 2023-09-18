@@ -11,9 +11,11 @@ import {PostInterface} from "../../interfaces/post.interface";
 export class BlogComponent implements OnInit {
 
   public currentPage = 1;
-  public itemsPerPage = 6;
+  public itemsPerPage = 4;
   public totalItemsPerPage!: Array<PostInterface>
+  public totalPages:Array<number> = [];
   public totalItems!: number
+  public activePage!:number
 
   constructor(private http: HttpClient) {
   }
@@ -29,31 +31,55 @@ export class BlogComponent implements OnInit {
   }
 
   public nextPage() {
+    if(this.currentPage===this.getTotalPages())
+      return;
     this.currentPage = this.currentPage + 1;
+    this.getSelectedPage(this.currentPage);
     this.getPost().subscribe(response => {
       this.totalItemsPerPage = response
     })
   }
 
   public prevPage() {
+    if(this.currentPage===1){
+      return;
+    }
     this.currentPage = this.currentPage - 1;
+    this.getSelectedPage(this.currentPage);
     this.getPost().subscribe(response => {
       this.totalItemsPerPage = response
     })
   }
 
+  public getSelectedPage(numberOfPage:number){
+    this.activePage = numberOfPage;
+  }
+  public selectPage(numberOfPage:number){
+    this.currentPage = numberOfPage;
+    this.getPost().subscribe(response => {
+      this.totalItemsPerPage = response
+    })
+    this.getSelectedPage(numberOfPage);
+  }
+
   getTotalPages(): number {
-    if (!this.totalItemsPerPage)
-      return 0;
     return Math.ceil(this.totalItems / this.itemsPerPage);
   }
 
   ngOnInit() {
+    this.currentPage=1;
+    this.activePage=1;
+
     this.getPost().subscribe(response => {
       this.totalItemsPerPage = response
+
     })
     this.getNumberOfPosts().subscribe(response => {
       this.totalItems = response[0].count
+
+      for (let page = 1; page <= this.getTotalPages(); page++) {
+        this.totalPages.push(page);
+      }
     })
   }
 }
