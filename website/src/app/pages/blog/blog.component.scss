@@ -100,6 +100,10 @@
     img {
       border-radius: 20px;
       width: 100%;
+      border: 1px solid var(--black-06);
+      &:hover{
+        border-color: var(--primary-1);
+      }
     }
 
     &-content {
