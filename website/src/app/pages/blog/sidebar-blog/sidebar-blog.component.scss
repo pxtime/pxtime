@@ -8,8 +8,9 @@
 .col {
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 20px;
 }
+
 ul {
   margin: 0;
   padding: 0;
@@ -26,6 +27,10 @@ ul {
       color: var(--black-01);
     }
   }
+}
+
+.recent {
+  margin-top: 15px;
 }
 
 .ebook {
