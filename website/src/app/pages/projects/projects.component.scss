@@ -7,6 +7,9 @@
     list-style: none;
     gap: 1px;
     width: fit-content;
+    @media (max-width: 768px) {
+      display: none;
+    }
 
     li {
       background: var(--white);
