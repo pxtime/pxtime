@@ -1,12 +1,18 @@
-.clients {
-  padding: 80px 0;
-  background: var(--white);
+:host{
 
-  &-content {
-    gap: 24px;
+  @media (max-width: 768px) {
+    display: none;
+  }
+  .clients {
+    padding: 80px 0;
+    background: var(--white);
 
-    strong {
-      color: var(--primary-1);
+    &-content {
+      gap: 24px;
+
+      strong {
+        color: var(--primary-1);
+      }
     }
   }
 }
