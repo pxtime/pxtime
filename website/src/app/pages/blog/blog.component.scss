@@ -102,7 +102,7 @@
       width: 100%;
       border: 1px solid var(--black-06);
       &:hover{
-        border-color: var(--primary-1);
+        border-color: var(--black-04);
       }
     }
 
@@ -185,8 +185,10 @@
     }
 
     &.disabled {
-      color: var(--black-04);
+      color: var(--black-07);
       cursor: not-allowed;
+      pointer-events: none;
+      opacity: 0.5;
     }
 
     &.active, &.active:hover {

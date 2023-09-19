@@ -1,4 +1,4 @@
-<div id="hero-blog">
+<div id="hero-blog" *ngIf="totalItemsPerPage.length">
   <div class="container">
     <div class="row">
       <div class="prevarticle"
@@ -18,7 +18,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-9">
-          <div class="row">
+          <div class="row" *ngIf="totalItemsPerPage">
             <div *ngFor="let post of totalItemsPerPage" class="col-md-6">
               <div class="blog-item">
                 <img *ngIf="post.fimg_url" src="{{post.fimg_url}}" alt="" class="img-fluid link"
@@ -45,32 +45,14 @@
         </div>
       </div>
     </div>
-    <div class="row">
-    </div>
-    <div class="controls">
-      <!--      <button (click)="prevPage()" [disabled]="currentPage===1">Prev page</button>-->
-      <!--      {{currentPage}}-->
-      <!--      <button (click)="nextPage()" [disabled]="currentPage===this.getTotalPages()">Next page</button>-->
-      <!--    </div>-->
-    </div>
     <div class="pagination">
-      <div class="navigate" (click)="prevPage()" [class.disabled]="currentPage===1"><</div>
-      <ng-container *ngIf="getTotalPages() <=5 ">
-        <div *ngFor="let page of totalPages" (click)="selectPage(page)" class="number" [class.active]="activePage===page">{{page}}</div>
+      <div (click)="firstPage()" [class.disabled]="currentPage === 1" class="number"><<</div>
+      <div (click)="prevPage()" [class.disabled]="currentPage === 1" class="number"><</div>
+      <ng-container *ngFor="let page of visiblePages">
+        <div (click)="selectPage(page)" [class.active]="currentPage === page" class="number">{{ page }}</div>
       </ng-container>
-      <ng-container *ngIf="getTotalPages()>5">
-        <ng-container *ngIf="currentPage + 3 < getTotalPages()"></ng-container>
-        <div class="number" (click)="selectPage(currentPage)"
-             [class.active]="activePage===currentPage">{{currentPage}}</div>
-        <div class="number" *ngIf="currentPage+1 < getTotalPages()" (click)="selectPage(currentPage+1)"
-             [class.active]="activePage===currentPage+1">{{currentPage + 1}}</div>
-        <div class="number" *ngIf="currentPage+2 < getTotalPages()" (click)="selectPage(currentPage+2)"
-             [class.active]="activePage===currentPage+2">{{currentPage + 2}}</div>
-        <div class="" *ngIf="currentPage!=getTotalPages()">...</div>
-        <div class="number" *ngIf="currentPage!=getTotalPages()" (click)="selectPage(getTotalPages())"
-             [class.active]="activePage===getTotalPages()">{{getTotalPages()}}</div>
-      </ng-container>
-
-      <div (click)="nextPage()" [class.disabled]="currentPage===getTotalPages()" class="navigate">></div>
+      <div (click)="nextPage()" [class.disabled]="currentPage === totalPages" class="number">></div>
+      <div (click)="lastPage()" [class.disabled]="currentPage === totalPages" class="number">>></div>
     </div>
   </div>
+</div>
